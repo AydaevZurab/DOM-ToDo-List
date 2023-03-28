@@ -1,15 +1,14 @@
 const form = document.getElementById('form')
 const input = document.getElementById('input')
-const ul = document.createElement('ul')
-form.after(ul) 
 
 form.addEventListener('submit', (eventObject) => {
     eventObject.preventDefault()
 
-    const li = document.createElement('li')
-    li.textContent = input.value;
+    const div = document.createElement('div')
+    div.textContent = input.value;
 
     const dlt = document.createElement('button')
+    dlt.id = 'delete'
     dlt.textContent = 'x'
 
     dlt.addEventListener('click', (eventObject) => {
@@ -19,8 +18,8 @@ form.addEventListener('submit', (eventObject) => {
     const mark = document.createElement('input')
     mark.setAttribute('type', 'checkbox')
 
-    ul.prepend(mark)
-    li.append(dlt)
-    ul.prepend(li)
+    div.prepend(mark)
+    div.append(dlt)
+    form.after(div)
     input.value = '';
 })

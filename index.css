@@ -1,0 +1,20 @@
+body {
+    margin-left: 650px;
+}
+
+#first {
+    margin-left: 30px;
+}
+
+#button {
+    background-color: rgb(73, 164, 255);
+    border-color: rgb(73, 164, 255);
+    border-radius: 5px;
+    color: white;
+}
+
+#delete {
+    background-color: red;
+    color: white;
+    border-color: red;
+}
